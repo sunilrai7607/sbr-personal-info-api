@@ -1,0 +1,18 @@
+server:
+  port: 9092
+
+profile:
+  baseUrl: http://localhost:9091/api/v1/profiles
+
+
+profileSecurity:
+  accessTokenUri: http://localhost:8080/oauth/token
+  clientId: 8765dbfe-48a7-4d2b-8cf4-cdf10aae46e4
+  clientSecret: 708f5e55-eb4d-4b4c-85af-381239d47213
+  grantType: client_credentials
+
+feign:
+  oauth2:
+    enabled: true
+  hystrix:
+    enabled: false
