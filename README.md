@@ -1,8 +1,7 @@
 ## sbr-personal-info-api 
 
-Personal Info MicroService which pull personal information from the profile api which Oauth2 enable.
-FeignClient for inter-service communication.
-Oauth2 token generated when this service get up and each request send Berare token along with request.
+Personal Info is a microservice which pull information from the profile microservice.
+Profile microservice which is Oauth2 enabled. 
 
 FeignClient to consume the Profile service. 
 ```java
@@ -15,7 +14,7 @@ public interface ProfileClient {
 
 ```
 
-FeignClientInterceptor generate Berare token when up the server
+FeignClientInterceptor generate Bearer Tokens when personal info micro service is up and send bearer token in each request 
 ```java
 @Value("${profileSecurity.accessTokenUri}")
     private String accessTokenUri;
